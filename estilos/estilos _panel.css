@@ -1,0 +1,25 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.a-x{
+    color: rgb(0, 0, 0);
+}
+.a-x:hover{
+    color: rgba(226, 3, 3, 0.822);
+}
+
+.navbar {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    line-height: 1.2; /* Ajusta el valor según sea necesario */
+  }
+  .navbar-brand {
+    max-height: 60px; /* Cambia el tamaño según el diseño */
+  }
+  
+
+
+.t-x{
+    background-color: black;
+}
