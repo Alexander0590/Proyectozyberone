@@ -7,6 +7,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos/estilosindex.css">
+  <link rel="shortcut icon" href="img/logo_respaldo1.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -22,7 +23,7 @@
         <i class="bi bi-lock-fill"></i>
         <input type="password" class="form-control" placeholder="Contraseña" name="clave" required>
       </div>
-      <button type="submit" class="btn btn-custom btn-block">Ingresar</button>
+      <button type="submit" class="btn btn-custom btn-block"><span id="ingre">Ingresar</span></button>
       <?php
       $dato = isset($_GET['dato']) ? $_GET['dato'] : '';
       if (!empty($dato)) {

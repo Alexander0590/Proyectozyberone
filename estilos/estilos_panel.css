@@ -1,0 +1,118 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+/*  ESTILOS MENU DE LA BARRA VERTICAL */
+.sidebar {
+    height: 100vh;
+    width: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    padding-top: 20px;
+    transition: width 0.3s;
+    overflow-x: hidden;
+}
+
+.sidebar.expanded  {
+    width: 250px; 
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #8773e7;
+    background-color: #ffffff;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+.sidebar:not(.expanded) a span {
+    display: none;
+}
+
+
+/* ESTILO DE LOS SUBMENU */
+.submenu {
+    display: none;
+    background-color: #060614;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.submenu a:hover {
+    color: #a69bdf;
+    background-color: #ffffff;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+.menu-btn {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+    display: block;
+    margin: 10px 20px;
+}
+
+.sidebar:not(.expanded) .menu-btn {
+    margin: 10px auto;
+}
+
+.v-a{
+background-color: #060614;
+
+
+}
+#xd{
+display: flex;
+justify-content: center;
+}
+#icono_panel_logo{
+  width: 50px;
+ margin-bottom: 9px;
+ margin-top: 9px;
+    
+}
+
+/* estilo MENU DE PERFIL */
+.container-fluid {
+    background-color: #060614; 
+    color: #a69bdf; 
+    padding: 1rem; 
+  }
+  #foto img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 2px solid #a69bdf; 
+  }
+  #nombre h5{
+    margin-top: 15px;
+    font-size: 17px; 
+  }
+  .perfil {
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+    margin-bottom: -9px;
+    margin-top: -10px;
+  }

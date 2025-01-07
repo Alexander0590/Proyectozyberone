@@ -7,7 +7,7 @@ $contraseña = $_POST['clave'];
 
 
 $sql = "SELECT * FROM usuarios WHERE usuario = ? AND contraseña = ?";
-$stmt = $conn->prepare($sql);
+$stmt = $cnn->prepare($sql);
 $stmt->bind_param("ss", $usuario, $contraseña);
 $stmt->execute();
 $result = $stmt->get_result();

@@ -1,15 +1,12 @@
 <?php
-// conexion.php
-$servername = "localhost"; // Cambia esto si es necesario
-$username = "root"; // Cambia esto por tu usuario de MySQL
-$password = ""; // Cambia esto por tu contraseña de MySQL
-$dbname = "vya"; // Cambia esto por el nombre de tu base de datos
+$servername = "localhost"; 
+$usuario = "root"; 
+$pass = ""; 
+$db = "vya"; 
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+$cnn = new mysqli($servername, $usuario, $pass, $db);
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+if ($cnn->connect_error) {
+    die("Conexión fallida: " . $cnn->connect_error);
 }
 ?>
