@@ -1,0 +1,180 @@
+
+/* VISTA DE AGREGAR PRODUCTOS */
+
+#formCard {
+  background-color: #0c0c24;
+  border-color: #a69bdf;
+  color: #fff;
+  position: relative;  
+  left: 100px; 
+  margin-top: -40px;
+}
+
+#btnCustom {
+  background-color: #a69bdf;
+  border-color: #a69bdf;
+  color: #060614;
+}
+#btnCustom:hover {
+  background-color: #8f84c9;
+  border-color: #8f84c9;
+}
+#formControlFocus, #formSelectFocus {
+  border-color: #a69bdf;
+  box-shadow: 0 0 0 0.25rem rgba(166, 155, 223, 0.25);
+}
+#sideBox {
+  background-color: #a69bdf;
+  color: #060614;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+}
+#card {
+  background-color: #0c0c24;
+  border-color: #a69bdf;
+  color: #fff;
+}
+#cardHeader {
+  background-color: #a69bdf;
+  color: #ffffff;
+  font-weight: bold;
+  padding: auto;
+}
+#imagenPreviewContainer {
+  position: absolute;
+  top: 10px;
+  left: 71rem;  
+  background-color: rgba(12, 12, 36, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #a69bdf;
+  margin-top: 180px;
+  width: auto;
+}
+#imagen2 {
+  position: absolute;
+  top: 10px;
+  left: 50rem;  
+  background-color: rgba(12, 12, 36, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #a69bdf;
+  margin-top: 140px;
+  width: auto;
+}
+#imagenvistapre{
+  width: 200px; 
+  height: 200px;
+}
+#imagenPreviewLabel{
+  color: #fff;
+}
+
+/* Opcional: Ajustar más si es necesario */
+@media (min-width: 768px) {
+  #mainContainer {
+      margin-top: 1rem; 
+  }
+}
+
+
+ /* Para pantallas grandes */
+ @media (min-width: 1500px) {
+  *{
+    font-size: large;
+  }
+  /*nombre de la barra horizontal*/
+  #nombre h5{
+    font-size: 18px;
+  }
+  /*Darle estilos  a la productos*/
+  #formCard {
+    background-color: #0c0c24;
+    border-color: #a69bdf;
+    color: #fff;
+    position: relative;  
+    left: 145px;
+  
+   
+    
+  }
+
+  #mainContainer {
+    margin-top: 2rem !important; 
+    left: -15px;
+  
+  }
+ 
+  #imagenPreviewContainer {
+    position: absolute;
+    top: 10px;
+    left: 71.5rem;  
+    background-color: rgba(12, 12, 36, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #a69bdf;
+    margin-top: 180px;
+    width: auto;
+  }
+  #imagenvistapre{
+    width: 200px; 
+    height: 200px;
+  }
+  /*agrandar barra horizontal*/
+  #bhoriz {
+    position: relative;
+    left: 70px; 
+    width: 82%; 
+    height: 80px;
+  
+    
+}
+
+}
+
+/* Para pantallas extra grandes */
+@media (min-width: 1620px) {
+  *{
+    font-size: 21px;
+  }
+  #nombre h5{
+    font-size: 21px;
+  }
+  #formCard {
+    background-color: #0c0c24;
+    border-color: #a69bdf;
+    color: #fff;
+    position: relative;  
+    left: 190px; 
+  }
+  #mainContainer {
+    margin-top: 2rem !important; 
+    margin-left: -75px;
+  
+  }
+  #imagenPreviewContainer {
+    position: absolute;
+    top: 10px;
+    left: 78.5rem;  
+    background-color: rgba(12, 12, 36, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #a69bdf;
+    margin-top: 180px;
+    width: auto;
+  }
+  #imagenvistapre{
+    width: 250px; 
+    height: 250px;
+  }
+  #bhoriz {
+    position: relative;
+    left: 90px; 
+    width: 82%; 
+    height: 84px;
+  
+    
+}
+
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #formCard {
+            background-color: #0c0c24;
+            border-color: #a69bdf;
+            top: -50px;
+            color: #fff;
+            position: relative;
+            left: 100px;
+            width: 100%; 
+            max-width: 1200px; 
+
+            margin: 0 auto; 
+        }
+
+        #formCardBody {
+            background-color: #0c0c24;
+            padding: 20px; 
+            border-radius: 5px; 
+        }
+
+        #btnCustom {
+            background-color: #a69bdf;
+            border-color: #a69bdf;
+            color: #060614;
+        }
+
+        #btnCustom:hover {
+            background-color: #8f84c9;
+            border-color: #8f84c9;
+        }
+
+        #formControlFocus, #formSelectFocus {
+            border-color: #a69bdf;
+            box-shadow: 0 0 0 0.25rem rgba(166, 155, 223, 0.25);
+        }
+
+        #sideBox {
+            background-color: #a69bdf;
+            color: #060614;
+            height: 100%;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        #card {
+            background-color: #0c0c24;
+            border-color: #a69bdf;
+            color: #fff;
+        }
+
+        #cardHeader {
+            background-color: #a69bdf;
+            color: #ffffff;
+            font-weight: bold;
+            padding: auto;
+        }
+        #mainContainer {
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start; 
+            height: 100vh; 
+            margin: 0;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            #formCard {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid animate__animated animate__fadeIn" id="mainContainer">
+        <div id="centeredFormWrapper" class="d-flex justify-content-center align-items-center mt-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-10 col-lg-9" id="formColumn">
+                    <div class="card shadow" id="formCard">
+                        <div class="card-header text-center" id="cardHeader">
+                            <b><i class="bi bi-people-fill"></i> GESTIÓN DE PROVEEDOR</b>
+                        </div>
+                        <div class="card-body" id="formCardBody">
+                            <form class="row g-3" id="productForm">
+                                <div class="col-md-6" id="datosContainer">
+                                    <label for="datos" class="form-label" id="datosLabel"><i class="bi bi-person"></i> Datos</label>
+                                    <input type="text" class="form-control" id="datos" required>
+                                </div>
+                                <div class="col-md-6" id="tipoDocumentoContainer">
+                                    <label for="tipoDocumento" class="form-label" id="tipoDocumentoLabel"><i class="bi bi-file-earmark-text"></i> Tipo de Documento</label>
+                                    <select class="form-select" id="tipoDocumento" required>
+                                        <option value="">Seleccione</option>
+                                        <option value="ruc">RUC</option>
+                                        <option value="dni">DNI</option>
+                                    </select>
+                                </div>
+                                <!-- Campo para el número de documento -->
+                                <div class="col-md-6" id="numeroDocumentoContainer">
+                                    <label for="numeroDocumento" class="form-label" id="numeroDocumentoLabel"><i class="bi bi-file-earmark-binary"></i> Número de Documento</label>
+                                    <input type="number" class="form-control" id="numeroDocumento" required>
+                                </div>
+                                <div class="col-md-6" id="emailContainer">
+                                    <label for="email" class="form-label" id="emailLabel"><i class="bi bi-envelope-fill"></i> Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6" id="telefonoContainer">
+                                    <label for="telefono" class="form-label" id="telefonoLabel"><i class="bi bi-telephone-fill"></i> Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono" required>
+                                </div>
+                                <div class="col-12 text-fill" id="buttonContainer">
+                                    <button type="submit" class="btn btn-primary" id="btnCustom"><i class="bi bi-plus-circle-fill"></i> Agregar</button>
+                                    <button type="button" class="btn btn-secondary" id="btnCustom"><i class="bi bi-arrow-repeat"></i> Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

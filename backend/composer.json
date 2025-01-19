@@ -1,0 +1,17 @@
+{
+    "name": "alexander/backend",
+    "autoload": {
+        "psr-4": {
+            "Alexander\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Dev",
+            "email": "josealexanderyoverasimbala@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6"
+    }
+}

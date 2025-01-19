@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Horizontal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css">
+    <style>
+
+        /* Contenedor que asegura el centrado horizontal */
+        #container-fluid {
+            display: flex;
+            justify-content: center; /* Centrado horizontal */
+            align-items: center; /* Centrado vertical */
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+        }
+
+        /* Estilos para el formulario */
+        #formCard {
+            width: 170%; /* Ajusta el tamaño del formulario */
+            max-width: 1000px; /* Máximo tamaño */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: -70px;
+        }
+
+        #cardHeader {
+            background-color: #a69bdf;
+            color: #ffffff;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .select-reducido {
+            width: 100%;
+        }
+
+        #inputReadonly {
+            cursor: not-allowed;
+        }
+
+        .form-label-bold {
+            font-weight: bold;
+        }
+
+        #btnContainer {
+            margin-top: 20px;
+        }
+
+        .btn-custom {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .form-control {
+            border-radius: 8px;
+        }
+
+        #ingresoForm .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid animate__animated animate__fadeIn mb-2 mt-2" id="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card" id="formCard">
+                    <div class="card-header text-center" id="cardHeader">
+                        <b><i class="bi bi-box-seam"></i> GESTIÓN DE INGRESOS</b>
+                    </div>
+    
+                    <div class="card-body">
+                        <form class="row g-4" id="ingresoForm">
+                            <div class="col-md-4">
+                                <label for="proveedor" class="form-label form-label-bold" id="labelProveedor">
+                                    <i class="bi bi-person-lines-fill"></i> Proveedor
+                                </label>
+                                <select class="form-select" id="proveedor" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="1" data-nombre="Proveedor A">Proveedor A</option>
+                                    <option value="2" data-nombre="Proveedor B">Proveedor B</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="nombreProveedor" class="form-label form-label-bold" id="labelNombreProveedor">
+                                    <i class="bi bi-person-badge"></i> Nombre del Proveedor
+                                </label>
+                                <input type="text" class="form-control" id="nombreProveedor" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="tipoComprobante" class="form-label form-label-bold" id="labelTipoComprobante">
+                                    <i class="bi bi-file-earmark-text"></i> Tipo de Comprobante
+                                </label>
+                                <select class="form-select select-reducido" id="tipoComprobante" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Factura">Factura</option>
+                                    <option value="Boleta">Boleta</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="serie" class="form-label form-label-bold" id="labelSerie">
+                                    <i class="bi bi-file-earmark"></i> Serie
+                                </label>
+                                <input type="text" class="form-control" id="serie" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="numeroComprobante" class="form-label form-label-bold" id="labelNumeroComprobante">
+                                    <i class="bi bi-hash"></i> Número
+                                </label>
+                                <input type="text" class="form-control" id="numeroComprobante" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="fecha" class="form-label form-label-bold" id="labelFecha">
+                                    <i class="bi bi-calendar"></i> Fecha 
+                                </label>
+                                <input type="date" class="form-control select-reducido" id="fecha" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="impuesto" class="form-label form-label-bold" id="labelImpuesto">
+                                    <i class="bi bi-cash-coin"></i> Impuesto
+                                </label>
+                                <input type="number" class="form-control" id="impuesto" value="18" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="estado" class="form-label form-label-bold" id="labelEstado">
+                                    <i class="bi bi-toggle-on"></i> Estado
+                                </label>
+                                <select class="form-select select-reducido" id="estado" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Activo">Activo</option>
+                                    <option value="Anulado">Anulado</option>
+                                </select>
+                            </div>
+    
+                            <!-- Detalle del Ingreso -->
+                            <h5 class="mt-4" id="detalleIngreso"><i class="bi bi-list-check"></i> Detalle del Ingreso</h5>
+                            <div class="col-md-4">
+                                <label for="producto" class="form-label form-label-bold" id="labelProducto">
+                                    <i class="bi bi-box"></i> Producto
+                                </label>
+                                <select class="form-select" id="producto" required onchange="updateProductDetails()">
+                                    <option value="">Seleccione</option>
+                                    <option value="101" data-nombre="Producto A" data-categoria="Categoría 1">Producto A</option>
+                                    <option value="102" data-nombre="Producto B" data-categoria="Categoría 2">Producto B</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="nombreProducto" class="form-label form-label-bold" id="labelNombreProducto">
+                                    <i class="bi bi-tag"></i> Nombre del Producto
+                                </label>
+                                <input type="text" class="form-control" id="nombreProducto" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="categoriaProducto" class="form-label form-label-bold" id="labelCategoriaProducto">
+                                    <i class="bi bi-list"></i> Categoría
+                                </label>
+                                <input type="text" class="form-control select-reducido" id="categoriaProducto" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cantidad" class="form-label form-label-bold" id="labelCantidad">
+                                    <i class="bi bi-stack"></i> Cantidad
+                                </label>
+                                <input type="number" class="form-control" id="cantidad" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="precioCompra" class="form-label form-label-bold" id="labelPrecioCompra">
+                                    <i class="bi bi-cart"></i> Precio de Compra
+                                </label>
+                                <input type="number" class="form-control" id="precioCompra" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="precioVenta" class="form-label form-label-bold" id="labelPrecioVenta">
+                                    <i class="bi bi-tag"></i> Precio de Venta
+                                </label>
+                                <input type="number" class="form-control select-reducido" id="precioVenta" required>
+                            </div>
+                             
+                            <div class="col-12" id="btnContainer">
+                                <button type="submit" class="btn btn-primary btn-custom" id="btnAgregar">
+                                    <i class="bi bi-plus-circle"></i> Agregar
+                                </button>
+                                <button type="button" class="btn btn-success btn-custom" id="btnActualizar">
+                                    <i class="bi bi-arrow-clockwise"></i> Actualizar
+                                </button>
+                            </div>
+                    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+   
+
+</body>
+</html>

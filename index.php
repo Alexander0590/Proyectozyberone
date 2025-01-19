@@ -20,6 +20,7 @@
         <input type="text" class="form-control" placeholder="Usuario" name="usuario" required>
       </div>
       <div class="form-group position-relative">
+      
         <i class="bi bi-lock-fill"></i>
         <input type="password" class="form-control" placeholder="Contraseña" name="clave" required>
       </div>

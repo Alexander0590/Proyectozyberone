@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTION DE USUARIOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+#tarjetaFormulario {
+  background-color: #0c0c24;
+  border-color: #a69bdf;
+  color: #fff;
+  position: relative;
+  left: 100px; 
+ margin-top: -38px;
+  
+}
+
+#btnCustom {
+  background-color: #a69bdf;
+  border-color: #a69bdf;
+  color: #060614;
+}
+
+#btnCustom:hover {
+  background-color: #8f84c9;
+  border-color: #8f84c9;
+}
+
+#formControlFocus, #formSelectFocus {
+  border-color: #a69bdf;
+  box-shadow: 0 0 0 0.25rem rgba(166, 155, 223, 0.25);
+}
+
+#tarjetaFormulario {
+  background-color: #0c0c24;
+  border-color: #a69bdf;
+  color: #fff;
+}
+
+#encabezadoTarjeta {
+  background-color: #a69bdf;
+  color: #ffffff;
+  font-weight: bold;
+  padding: auto;
+}
+
+#imagenVistaPreviaContenedor {
+  position: relative;
+  left: 80px;
+  top: 30px;
+  background-color: rgba(12, 12, 36, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+
+  margin-top: 20px;
+  width: auto;
+  height: auto;
+}
+
+#imagenVistaPrevia2 {
+  width: 180px;
+  height: 200px;
+}
+
+#imagenVistaPreviaEtiqueta {
+  color: #fff;
+}
+
+#imagenVistaPreviaContenedor {
+  margin-left: 20px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+@media (min-width: 1500px) {
+#tarjetaFormulario {
+  background-color: #0c0c24;
+  position: relative;
+  left: 130px; 
+}
+#imagenVistaPreviaContenedor {
+  position: relative;
+  left: 70px;
+  top: 30px;
+  background-color: rgba(12, 12, 36, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+
+  margin-top: 20px;
+  width: auto;
+  height: auto;
+}
+
+#imagenVistaPrevia2 {
+  width: 180px;
+  height: 200px;
+}
+
+#imagenVistaPreviaEtiqueta {
+  color: #fff;
+}
+
+#imagenVistaPreviaContenedor {
+  margin-left: 70px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+}
+@media (min-width: 1620px) {
+#tarjetaFormulario {
+  position: relative;
+  left: 190px; 
+}
+#imagenVistaPreviaContenedor {
+  position: relative;
+  left: 120px;
+  top: 30px;
+  background-color: rgba(12, 12, 36, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+
+  margin-top: 20px;
+  width: auto;
+  height: auto;
+}
+
+#imagenVistaPrevia2 {
+  width: 220px;
+  height: 240px;
+}
+
+#imagenVistaPreviaEtiqueta {
+  color: #fff;
+}
+
+#imagenVistaPreviaContenedor {
+  margin-left: 70px;
+  width: 190%;
+  max-width: 250px;
+  text-align: center;
+}
+
+}
+
+</style>
+</head>
+<body id="usuarios">
+    <div class="container-fluid mt-5 animate__animated animate__fadeIn" id="mainContainer">
+        <div class="row" id="mainRow">
+          <div class="col-md-9" id="formColumn">
+            <div class="card" id="tarjetaFormulario">
+              <div class="card-header text-center" id="encabezadoTarjeta">
+                <b><i class="bi bi-box-seam"></i> GESTIÓN DE USUARIOS</b>
+              </div>
+      
+              <div class="card-body" id="formCardBody">
+                <form class="row g-3" id="productForm">
+                  <!-- Nombre -->
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label"><i class="bi bi-person"></i> Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                  </div>
+                  <!-- Usuario -->
+                  <div class="col-md-6">
+                    <label for="usuario" class="form-label"><i class="bi bi-person-badge"></i> Usuario</label>
+                    <input type="text" class="form-control" id="usuario" required>
+                  </div>
+                  <!-- Contraseña -->
+                  <div class="col-md-6">
+                    <label for="contraseña" class="form-label"><i class="bi bi-shield-lock"></i> Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña" required>
+                  </div>
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <label for="email" class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <!-- Teléfono -->
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label"><i class="bi bi-phone"></i> Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" required>
+                  </div>
+                  <div class="col-md-6" id="imagenContainer">
+                    <label for="Foto" class="form-label" id="imagenLabel">
+                        <i class="bi bi-camera"></i> Foto
+                    </label>
+                    <input type="file" class="form-control" id="foto2" accept="image/*">
+                </div>
+                  <!-- Rol -->
+                  <div class="col-md-6">
+                    <label for="rol" class="form-label"><i class="bi bi-person-lines-fill"></i> Rol</label>
+                    <select class="form-select" id="rol" required>
+                      <option value="">Seleccione</option>
+                      <option value="administrador">Administrador</option>
+                      <option value="vendedor">Vendedor</option>
+                      <option value="almacenero">Almacenero</option>
+                    </select>
+                  </div>
+                  <!-- Botones -->
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Agregar</button>
+                    <button type="button" class="btn btn-success"><i class="bi bi-arrow-clockwise"></i> Actualizar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-3" id="columnaLateral">
+            <div id="imagenVistaPreviaContenedor">
+              <label class="form-label" id="imagenVistaPreviaEtiqueta">
+                <b><i class="bi bi-eye"></i> Vista previa</b>
+              </label>
+              <div id="imagenVistaPrevia">
+                <img id="imagenVistaPrevia2" src="img/preimgpro.gif" alt="Vista previa">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <script>
+       //cargar la imagen de producto a la vista previa
+       document.getElementById('foto2').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagenVistaPrevia2').src = e.target.result;
+            };  
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>

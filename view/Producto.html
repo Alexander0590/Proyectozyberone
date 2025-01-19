@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTION DE PRODUCTOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body id="produc" >
+    
+    <div class="container-fluid mt-5  animate__animated animate__fadeIn" id="mainContainer">
+        <div class="row" id="mainRow">
+            <div class="col-md-9" id="formColumn">
+                <div class="card" id="formCard">
+                    <div class="card-header text-center" id="cardHeader">
+                        <b ><i class="bi bi-box-seam"></i> GESTIÓN DE PRODUCTOS</b>
+                    </div>
+    
+                    <div class="card-body" id="formCardBody">
+                        <form class="row g-3" id="productForm">
+                            <div class="col-md-4" id="codigoContainer">
+                                <label for="codigo" class="form-label" id="codigoLabel">
+                                    <i class="bi bi-upc-scan"></i> Código de Producto
+                                </label>
+                                <input type="text" class="form-control" id="codigo" required>
+                            </div>
+                            <div class="col-md-4" id="categoriaContainer">
+                                <label for="categoria" class="form-label" id="categoriaLabel">
+                                    <i class="bi bi-list"></i> Categoría
+                                </label>
+                                <select class="form-select" id="categoria" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="1">Categoría 1</option>
+                                    <option value="2">Categoría 2</option>
+                                    <option value="3">Categoría 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4" id="nombreProductoContainer">
+                                <label for="nombreProducto" class="form-label" id="nombreProductoLabel">
+                                    <i class="bi bi-tag"></i> Nombre de Producto
+                                </label>
+                                <input type="text" class="form-control" id="nombreProducto" required>
+                            </div>
+                            <div class="col-md-4" id="stockContainer">
+                                <label for="stock" class="form-label" id="stockLabel">
+                                    <i class="bi bi-inboxes"></i> Stock
+                                </label>
+                                <input type="number" class="form-control" id="stock" required>
+                            </div>
+                            <div class="col-md-8" id="descripcionContainer">
+                                <label for="descripcion" class="form-label" id="descripcionLabel">
+                                    <i class="bi bi-chat-left-text"></i> Descripción
+                                </label>
+                                <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                            </div>
+                            <div class="col-md-4" id="imagenContainer">
+                                <label for="imagen" class="form-label" id="imagenLabel">
+                                    <i class="bi bi-camera"></i> Imagen
+                                </label>
+                                <input type="file" class="form-control" id="imagen" accept="image/*">
+                            </div>
+                            <div class="col-md-4" id="estadoContainer">
+                                <label for="estado" class="form-label" id="estadoLabel">
+                                    <i class="bi bi-toggle-on"></i> Estado
+                                </label>
+                                <select class="form-select" id="estado" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4" id="marcaContainer">
+                                <label for="marca" class="form-label" id="marcaLabel">
+                                    <i class="bi bi-building"></i> Marca
+                                </label>
+                                <input type="text" class="form-control" id="marca" required>
+                            </div>
+                            <div class="col-md-4" id="precioContainer">
+                                <label for="precio" class="form-label" id="precioLabel">
+                                    <i class="bi bi-cash-coin"></i> Precio
+                                </label>
+                                <input type="number" class="form-control" id="precio" required placeholder="S/.">
+                            </div>
+                            <div class="col-12" id="buttonContainer">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-plus-circle"></i> Agregar
+                                </button>
+                                <button type="button" class="btn btn-success">
+                                    <i class="bi bi-arrow-clockwise"></i> Actualizar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3 animate__animated animate__fadeIn" id="sideBoxColumn">
+                <div id="imagenPreviewContainer">
+                    <label class="form-label" id="imagenPreviewLabel">
+                        <b><i class="bi bi-eye"></i> Vista previa</b>
+                    </label>
+                    <div id="imagenPreview">
+                        <img id="imagenvistapre" src="img/preimgpro.gif" alt="Vista previa">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       //cargar la imagen de producto a la vista previa
+   document.getElementById('imagen').addEventListener('change', function(event) {
+    var file = event.target.files[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('imagenvistapre').src = e.target.result;
+    };  
+    reader.readAsDataURL(file);
+  });
+
+    </script>
+</body>
+</html>

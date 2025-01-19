@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-10-2024 a las 03:21:48
+-- Tiempo de generación: 14-01-2025 a las 00:00:40
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,8 +45,7 @@ CREATE TABLE `detalle_ingreso` (
   `idingreso` int(11) DEFAULT NULL,
   `idproduc` int(11) DEFAULT NULL,
   `cantidad` int(11) DEFAULT NULL,
-  `precio_compra` decimal(11,2) DEFAULT NULL,
-  `precio_venta` decimal(11,2) DEFAULT NULL
+  `precio_compra` decimal(11,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -89,13 +88,12 @@ CREATE TABLE `ingreso` (
 
 CREATE TABLE `persona` (
   `idpersona` int(11) NOT NULL,
-  `tipo_persona` varchar(20) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `tipo_documento` varchar(20) DEFAULT NULL,
   `num_documento` varchar(15) DEFAULT NULL,
   `direccion` varchar(70) DEFAULT NULL,
   `telefono` varchar(15) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL
+  `Sexo` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -112,7 +110,8 @@ CREATE TABLE `producto` (
   `stock` int(11) DEFAULT NULL,
   `descripcion` text DEFAULT NULL,
   `imagen` varchar(50) DEFAULT NULL,
-  `estado` varchar(50) DEFAULT NULL
+  `estado` varchar(50) DEFAULT NULL,
+  `precio_venta` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -140,15 +139,19 @@ CREATE TABLE `usuarios` (
   `iduser` int(11) NOT NULL,
   `usuario` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `contraseña` char(8) DEFAULT NULL
+  `contraseña` char(8) DEFAULT NULL,
+  `telefono` char(16) DEFAULT NULL,
+  `nombres` varchar(255) DEFAULT NULL,
+  `rol` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`iduser`, `usuario`, `email`, `contraseña`) VALUES
-(1, 'alex', 'alex@gmail.com', '123456');
+INSERT INTO `usuarios` (`iduser`, `usuario`, `email`, `contraseña`, `telefono`, `nombres`, `rol`) VALUES
+(1, 'alex', 'alex@gmail.com', '123456', '98008371', 'Jose Alexander Yovera Simbala', 'Administrador'),
+(3, 'admin', 'Peter Parker@gmail.com', 'admin', '903138195', 'Peter Parker', 'Administrador');
 
 -- --------------------------------------------------------
 
@@ -285,7 +288,7 @@ ALTER TABLE `proveedor`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`
